@@ -1,2 +1,2 @@
-# farahchaaban.github.io
+# farah-chaaban.github.io
 Personal academic website
