@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+   <!-- Indique au navigateur que le document utilise HTML5. -->
+
+<html lang="en" data-lang="en">
+   <!-- lang="en" : la langue initiale est anglais.
+   data-lang="en" : utilise par ton site pour afficher les textes anglais et masquer les textes francais. -->
+
+<head>
+   <!-- Debut des reglages de la page.
+   Le contenu de cette partie ne s affiche pas dans le corps de la page. -->
+
+<meta charset="UTF-8">
+   <!-- Permet d afficher les accents et les caracteres speciaux. -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Adapte la largeur de la page a l ecran : ordinateur, tablette ou telephone. -->
+
+<title>Teaching - Farah Chaaban</title>
+   <!-- Texte affiche dans l onglet du navigateur.
+   Tu peux le remplacer par : Farah Chaaban -->
+
+<meta name="description" content="Teaching of Farah Chaaban, postdoctoral researcher in mathematics at Inria Paris.">
+   <!-- Description de la page, qui peut etre utilisee par les moteurs
+   de recherche si le site devient public. Cette ligne ne rend pas le site public. -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+   <!-- Prepare la connexion au service Google Fonts pour accelerer le chargement des polices. -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- Prepare la connexion au serveur qui fournit les fichiers des polices. crossorigin permet leur chargement depuis ce domaine externe. -->
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+   <!-- Charge les trois polices utilisees par ton site :
+   IBM Plex Mono : dates et petits elements techniques.
+   IBM Plex Sans : menu, titres et coordonnees.
+   STIX Two Text : paragraphes et grand titre de ton nom.
+
+   Les nombres 400, 500 et 600 correspondent aux graisses :
+   normale, moyenne et semi-grasse.
+
+   display=swap permet d afficher immediatement le texte avec une police de remplacement pendant le chargement. -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+   <!-- Charge la police d icones Academicons : ResearchGate, ORCID, HAL, etc. -->
+    
+<style>
+   /* Layout: sticky top bar, one scrolling column 1040px wide; the home block is a two-column grid (identity card left, text right) that stacks on phones. */
+   :root 
+   {
+    /* Fond principal de la page : blanc. */
+    --paper: #eef2f6;
+    /* Fond du menu et de certains blocs : gris bleu tres clair. */
+    --surface: #e4e9ef;
+    /* Couleur du texte principal : bleu sombre. */
+    --ink: #283a50;
+    /* Couleur des textes secondaires : gris. */
+    --muted: #606d7b;
+    /* Couleur des bordures et lignes de separation. */
+    --rule: #cdd6df;
+    /* Couleur principale des liens et de certains titres : bleu. */
+    --accent: #315b7b;     
+    /* Couleur complementaire : rose poudre.
+    Elle sert notamment a distinguer des elements des schemas. */
+    --negative: #b38794;    
+    /* Fond des informations provisoires a completer. */
+    --todo: #dde4eb;
+    /* Texte des informations provisoires a completer. */
+    --todo-ink: #52677b;
+    /* Police des paragraphes.
+    Si la premiere n est pas disponible, le navigateur essaie les suivantes, dans l ordre. */
+    --font-body: "STIX Two Text", "STIX Two Math", Georgia, "Times New Roman", serif;
+    /* Police du menu, des titres et des coordonnees. */
+    --font-ui: "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+    /* Police des dates : chaque caractere occupe la meme largeur. */
+    --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    /* Indique un theme clair pour les elements du navigateur, comme les champs de formulaire et les barres de defilement. */
+    color-scheme: light;
+   }
+
+   /* Applique ces reglages si le visiteur prefere le mode sombre. */
+   @media (prefers-color-scheme: dark) 
+   {:root:not([data-theme="light"]) 
+    {
+     /* Sauf si la page impose explicitement le theme clair
+     avec data-theme="light" sur la balise <html>. */
+      --paper: #141d28;     /* Fond principal : bleu tres sombre. */
+     --surface: #1e2b39;   /* Fond du menu et des blocs. */
+     --ink: #eaf0f5;       /* Texte principal : presque blanc. */
+     --muted: #b1c0cf;     /* Texte secondaire : gris bleu clair. */
+     --rule: #35485b;      /* Bordures et separations. */
+     --accent: #a8c9e4;    /* Liens et titres : bleu clair. */
+     --negative: #d3aab7;  /* Couleur complementaire : rose poudre. */
+     --todo: #293b4d;      /* Fond des informations a completer. */
+     --todo-ink: #c9dbe9;  /* Texte des informations a completer. */
+     /* Adapte aussi les elements natifs du navigateur au mode sombre. */
+     color-scheme: dark;
+    }}
+     /* Applique ces couleurs quand le theme sombre est explicitement choisi sur la page. */
+     :root[data-theme="dark"] {
+     --paper: #141d28;     /* Fond principal. */
+     --surface: #1e2b39;   /* Fond du menu et des blocs. */
+     --ink: #eaf0f5;       /* Texte principal clair. */
+     --muted: #b1c0cf;     /* Texte secondaire. */
+     --rule: #35485b;      /* Bordures et separations. */
+     --accent: #a8c9e4;    /* Liens et certains titres. */
+     --negative: #d3aab7;  /* Couleur complementaire rose. */
+     --todo: #293b4d;      /* Fond des informations a completer. */
+     --todo-ink: #c9dbe9;  /* Texte des informations a completer. */
+     color-scheme: dark;  /* elements du navigateur en mode sombre. */
+    }
+
+   /* Inclut les bordures et les marges interieures (padding) dans la largeur et la hauteur definies pour chaque element.
+   ::before et ::after designent les elements decoratifs que le CSS peut ajouter. */
+   *, *::before, *::after {box-sizing: border-box;}
+
+   html {
+   /* Rend progressif le defilement vers une section de la page. */
+   scroll-behavior: smooth;
+
+   /* Evite certains ajustements automatiques de taille du texte, notamment sur les navigateurs mobiles. */
+   -webkit-text-size-adjust: 100%;}
+
+   /* Desactive le defilement anime si le visiteur a demande a reduire les animations dans les reglages de son appareil. */
+   @media (prefers-reduced-motion: reduce) {
+   html {
+   scroll-behavior: auto;
+   }}
+
+   body {
+   /* Supprime la marge exterieure ajoutee par defaut au document. */
+   margin: 0;
+
+   /* Utilise la couleur de fond definie dans --paper. */
+   background: var(--paper);
+
+   /* Utilise la couleur du texte definie dans --ink. */
+   color: var(--ink);
+
+   /* Utilise la police principale definie dans --font-body. */
+   font-family: var(--font-body);
+
+   /* Taille du texte : generalement 18 px
+   si la taille de reference du navigateur est de 16 px. */
+   font-size: 1.125rem;
+
+   /* Espacement entre les lignes : 1,6 fois la taille du texte. */
+   line-height: 1.6;
+   }
+
+   /* Cache les textes francais quand l'anglais est actif, et les textes anglais quand le francais est actif. */
+   html[data-lang="en"] body [lang="fr"],
+   html[data-lang="fr"] body [lang="en"] {
+   display: none;
+   }
+
+   /* Apparence des liens. */
+   a {
+   color: var(--accent);            /* Couleur principale du site. */
+   text-decoration-thickness: 1px;  /* Epaisseur du soulignement. */
+   text-underline-offset: 3px;      /* Distance entre texte et soulignement. */
+   }
+
+   /* Epaissit le soulignement au passage de la souris. */
+   a:hover {
+   text-decoration-thickness: 2px;
+   }
+
+   /* Rend visible l'element selectionne avec le clavier, par exemple avec la touche Tab. */
+   :focus-visible {
+   outline: 2px solid var(--accent); /* Contour de selection. */
+   outline-offset: 3px;              /* Espace autour du contour. */
+   border-radius: 2px;               /* Coins legerement arrondis. */
+   }
+
+   /* BARRE DE NAVIGATION EN HAUT */
+   .topbar {
+   position: sticky;                  /* Reste visible pendant le defilement. */
+   top: 0;                            /* Se fixe au bord superieur. */
+   z-index: 10;                       /* Passe devant les elements ordinaires. */
+   background: var(--surface);        /* Couleur de fond du menu. */
+   border-bottom: 1px solid var(--rule); /* Ligne sous le menu. */
+   }
+
+   /* Contenu interieur de la barre de navigation. */
+   .topbar-inner {
+   max-width: 1040px;          /* Largeur maximale du contenu. */
+   margin: 0 auto;            /* Centre le bloc horizontalement. */
+   padding: 10px 20px;        /* Espace interieur : vertical puis horizontal. */
+
+   display: flex;            /* Place les elements sur une ligne. */
+   flex-wrap: wrap;          /* Autorise le passage a la ligne si necessaire. */
+   align-items: center;      /* Centre les elements sur la hauteur de la ligne. */
+   gap: 6px 24px;            /* Espace entre les lignes puis entre les elements. */
+
+   font-family: var(--font-ui); /* Police du menu. */
+   font-size: 0.9rem;           /* Taille du texte du menu. */
+   }
+
+   /* Nom du site dans la barre de navigation. */
+   .brand {
+   font-weight: 600;          /* Texte semi-gras. */
+   color: var(--ink);         /* Couleur du texte principal. */
+   text-decoration: none;    /* Supprime le soulignement. */
+   margin-right: auto;       /* Repousse les elements suivants vers la droite. */
+   }
+
+   /* Groupe des liens du menu. */
+   .nav {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 4px 18px;            /* Espacement vertical puis horizontal. */
+   }
+
+   /* Apparence de chaque lien du menu. */
+   .nav a {
+   color: var(--muted);      /* Couleur secondaire. */
+   text-decoration: none;
+   padding: 4px 0;
+
+   /* Reserve une ligne invisible pour eviter un decalage quand le lien devient actif ou est survole. */
+   border-bottom: 2px solid transparent;
+   }
+
+   /* Met en valeur la page actuelle et le lien survole. */
+   .nav a[aria-current="page"],
+   .nav a:hover {
+   color: var(--ink);
+   border-bottom-color: var(--accent);
+   }
+
+   /* Conteneur des boutons de langue EN et FR. */
+   .lang {
+   display: flex;                    /* Place les boutons cote a cote. */
+   border: 1px solid var(--rule);    /* Bordure autour du groupe. */
+   border-radius: 4px;               /* Coins arrondis. */
+   overflow: hidden;                /* Coupe ce qui depasse des coins. */
+   }
+
+   /* Apparence des boutons de langue. */
+   .lang button {
+   font: inherit;                   /* Reprend la police du parent. */
+   font-size: 0.8rem;
+   font-weight: 500;
+   letter-spacing: 0.04em;          /* Espacement entre les lettres. */
+
+   padding: 3px 9px;
+   border: 0;                       /* Supprime la bordure par defaut. */
+   background: transparent;
+   color: var(--muted);
+   cursor: pointer;                 /* Affiche une main au survol. */
+   }
+
+   /* Met en valeur le bouton de la langue active. */
+   .lang button[aria-pressed="true"] {
+   background: var(--accent);
+   color: var(--paper);
+   }
+
+   /* CONTENU PRINCIPAL DE LA PAGE */
+   main {
+   max-width: 1040px;         /* Largeur maximale. */
+   margin: 0 auto;           /* Centre le contenu. */
+
+   /* Espace interieur : haut, gauche et droite, bas. */
+   padding: 0 20px 56px;
+   }
+
+   /* Espacement des sections. */
+   section {
+   padding-top: 48px;        /* Espace au-dessus du contenu de la section. */
+
+   /* Laisse de la place au-dessus lors d'un acces par une ancre, pour tenir compte du menu fixe. */
+   scroll-margin-top: 56px;
+   }
+
+   /* Reglages communs aux titres. */
+   h1, h2, h3 {
+   font-family: var(--font-ui);
+   text-wrap: balance;       /* Equilibre les lignes quand le navigateur le permet. */
+   line-height: 1.25;        /* Espacement entre les lignes du titre. */
+   margin: 0;               /* Supprime les marges par defaut. */
+   }
+
+   /* Titre principal. */
+   h1 {
+   font-size: 1.7rem;
+   font-weight: 600;
+   }
+
+   /* Titres des grandes rubriques. */
+   h2 {
+   font-size: 0.82rem;
+   font-weight: 600;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;        /* Affiche le titre en majuscules. */
+   color: var(--accent);
+
+   padding-bottom: 8px;              /* Espace entre le titre et sa ligne. */
+   margin-bottom: 18px;              /* Espace apres le titre. */
+   border-bottom: 1px solid var(--rule);
+   }
+
+   /* Sous-titres. */
+   h3 {
+   font-size: 1rem;
+   font-weight: 600;
+   margin: 22px 0 8px;       /* Espace au-dessus puis en dessous. */
+   }
+
+   /* Paragraphes. */
+   p {
+   margin: 0 0 14px;         /* Espace sous chaque paragraphe. */
+   max-width: 66ch;          /* Limite la largeur a environ 66 caracteres. */
+   }
+
+   /* Listes a puces. */
+   ul {
+   margin: 0 0 14px;
+   padding-left: 1.2em;      /* Decale la liste pour laisser de la place aux puces. */
+   max-width: 66ch;
+   }
+
+   /* Espace sous chaque element de liste. */
+   li {
+   margin-bottom: 6px;
+   }
+
+   /* Couleur des puces et des numeros des listes. */
+   li::marker {
+   color: var(--accent);
+   }
+
+   /* BLOC D'ACCUEIL EN DEUX COLONNES */
+   .home {
+   display: grid;
+
+   /* Colonne de gauche : 330 px. Colonne de droite : prend l'espace restant et peut se reduire. */
+   grid-template-columns: 330px minmax(0, 1fr);
+
+   gap: 40px;               /* Espace entre les colonnes. */
+   align-items: start;      /* Aligne les blocs en haut. */
+   }
+
+   /* Bloc des informations personnelles. */
+   .card {
+   display: flex;
+   flex-direction: column;  /* Empile les elements verticalement. */
+   gap: 14px;
+   font-family: var(--font-ui);
+   font-size: 0.92rem;
+   line-height: 1.5;
+   }
+
+   /* Apparence d'une photo ou d'un bloc contenant des initiales.
+   Cette regle ne cree pas de photo : il faut un element avec la classe "photo" dans le HTML. */
+   .photo {
+   width: 100%;
+   max-width: 250px;
+   aspect-ratio: 4 / 5;      /* Proportions du bloc : largeur / hauteur. */
+   border-radius: 6px;
+
+   /* Fond en degrade de bleu. */
+   background: linear-gradient(145deg, #284b68, #7393ac);
+
+   /* Centre les initiales si le bloc contient du texte. */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   color: #ffffff;
+   font-size: 3.4rem;
+   font-weight: 600;
+   letter-spacing: 0.04em;
+
+   /* Si l'element est une image, remplit son cadre en recadrant si necessaire, sans deformation. */
+   object-fit: cover;
+   }
+
+   /* Reglages particuliers si la classe "photo" est utilisee sur une vraie image <img>. */
+   img.photo {
+   display: block;
+   height: auto;
+   background: none;
+   }
+
+   /* Texte indiquant le poste ou le statut. */
+   .status {
+   color: var(--muted);
+   margin-top: 2px;
+   }
+
+   /* Groupe des coordonnees : email, adresse, etc. */
+   .facts {
+   display: grid;
+   gap: 8px;
+   margin: 0;
+   }
+
+   /* Libelles des coordonnees, comme Email ou Address. */
+   .facts dt {
+   font-size: 0.72rem;
+   font-weight: 600;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   color: var(--muted);
+   }
+
+   /* Valeurs des coordonnees. */
+   .facts dd {
+   margin: 0;
+
+   /* Permet de couper une longue adresse ou un lien pour eviter qu'il depasse du bloc. */
+   overflow-wrap: anywhere;
+   }
+
+   /* CADRE DES FIGURES SCIENTIFIQUES */
+   .figure {
+   /* Espace exterieur : haut 22 px, cotes 0, bas 6 px. */
+   margin: 22px 0 6px;
+
+   /* Espace entre le contenu et les bords du cadre. */
+   padding: 16px;
+
+   /* Limite la largeur de la figure. */
+   max-width: 600px;
+
+   /* Fond, bordure fine et coins arrondis. */
+   background: var(--surface);
+   border: 1px solid var(--rule);
+   border-radius: 6px;
+   }
+
+   /* Dessin SVG place dans une figure. */
+   .figure svg {
+   display: block;  /* Supprime l'espace habituel sous une image en ligne. */
+   width: 100%;     /* Occupe toute la largeur disponible. */
+   height: auto;    /* Conserve les proportions du dessin. */
+   }
+
+   /* Legende placee sous la figure. */
+   .figure figcaption {
+   font-family: var(--font-ui);
+   font-size: 0.84rem;
+   line-height: 1.5;
+   color: var(--muted);
+   margin-top: 10px; /* Espace entre le dessin et la legende. */
+   }
+
+   /* Zone representant le milieu a coefficient positif. */
+   .fig-pos {
+   fill: var(--accent); /* Couleur de remplissage. */
+   fill-opacity: 0.13;  /* Remplissage a 13 % d'opacite. */
+   }
+
+   /* Zone representant le milieu a coefficient negatif. */
+   .fig-neg {
+   fill: var(--negative);
+   fill-opacity: 0.13;
+   }
+
+   /* Contour du schema. */
+   .fig-frame {
+   fill: none;          /* Aucun remplissage. */
+   stroke: var(--rule); /* Couleur du trait. */
+   stroke-width: 1.5;   /* Epaisseur du trait. */
+   }
+
+   /* Ligne separant les deux milieux. */
+   .fig-interface {
+   stroke: var(--ink);
+   stroke-width: 1.5;
+
+   /* Alterne des traits de longueur 5 et des espaces de longueur 4. */
+   stroke-dasharray: 5 4;
+   }
+
+   /* Courbe representant une onde. */
+   .fig-wave {
+   fill: none;
+   stroke: var(--ink);
+   stroke-width: 2.2;
+   stroke-linejoin: round; /* Arrondit les jonctions entre les segments. */
+   }
+
+   /* Texte a l'interieur du dessin SVG. */
+   .fig-text {
+   font-family: var(--font-body);
+   font-size: 17px;
+
+   /* Dans un SVG, fill definit la couleur du texte. */
+   fill: var(--ink);
+   }
+
+   /* Couleurs des textes associes aux deux milieux. */
+   .fig-text-pos {
+   fill: var(--accent);
+   }
+
+   .fig-text-neg {
+   fill: var(--negative);
+   }
+
+   /* Expressions mathematiques dans le texte de la page. */
+   .math {
+   font-style: italic;
+   white-space: nowrap; /* Empeche le passage a la ligne dans l'expression. */
+   }
+
+
+   /* LISTES DES PUBLICATIONS, CONFERENCES, ENSEIGNEMENTS ET DU CV */
+   .entries {
+   list-style: none; /* Supprime les puces ou les numeros. */
+   padding: 0;       /* Supprime le retrait interieur de la liste. */
+   margin: 0;        /* Supprime ses marges exterieures. */
+
+   display: grid;    /* Organise les entrees dans une grille. */
+   gap: 14px;        /* Espace entre les entrees. */
+   max-width: none;  /* Retire la limite de largeur appliquee aux listes. */
+   }
+
+   /* Chaque entree comporte deux colonnes. */
+   .entries li {
+   display: grid;
+
+   /* Date : 130 px.
+   Description : tout l'espace restant. */
+   grid-template-columns: 130px minmax(0, 1fr);
+
+   gap: 18px; /* Espace entre la date et la description. */
+   margin: 0;
+   }
+
+   /* Apparence de la date. */
+   .when {
+   font-family: var(--font-mono);
+   font-size: 0.82rem;
+   color: var(--muted);
+   padding-top: 4px;
+
+   /* Donne la meme largeur a tous les chiffres,
+   si cette option est disponible dans la police. */
+   font-variant-numeric: tabular-nums;
+   }
+
+   /* Supprime les marges des paragraphes dans la description. */
+   .what p {
+   margin: 0;
+   }
+
+   /* Informations secondaires de la description. */
+   .what .detail {
+   color: var(--muted);
+   font-size: 1rem;
+   }
+
+
+   /* APPARENCE DES INFORMATIONS PROVISOIRES */
+   .todo {
+   background: var(--todo);  /* Couleur du fond. */
+   color: var(--todo-ink);   /* Couleur du texte. */
+   border-radius: 3px;       /* Coins arrondis. */
+   padding: 0 5px;           /* Petit espace a gauche et a droite. */
+   }
+
+
+   /* LISTE DE LIENS, PAR EXEMPLE HAL, ORCID ET RESEARCHGATE */
+   .links {
+   display: flex;   /* Place les liens cote a cote. */
+   flex-wrap: wrap; /* Autorise le passage a la ligne. */
+
+   /* Espace entre les lignes : 8 px.
+   Espace entre les icones : 18 px. */
+   gap: 8px 18px;
+
+   font-family: var(--font-ui);
+   font-size: 0.9rem;
+
+   list-style: none; /* Supprime les puces. */
+   padding: 0;
+   margin: 0 0 14px; /* Ajoute un espace sous la liste. */
+   }
+
+   /* Retire la marge sous chaque lien de cette liste. */
+   .links li {
+   margin: 0;
+   }
+
+   /* Taille et couleur des icones de liens. */
+   .links a {
+   font-size: 2rem;        /* Taille des icones : a augmenter ou reduire. */
+   line-height: 1;
+   color: var(--ink);
+   text-decoration: none;  /* Pas de soulignement sous les icones. */
+   }
+
+   /* Couleur de l'icone au passage de la souris. */
+   .links a:hover {
+   color: var(--accent);
+   }
+
+
+   /* BAS DE PAGE */
+   footer {
+   /* Prend la largeur disponible moins 40 px,
+   ce qui laisse normalement 20 px de chaque cote. */
+   width: calc(100% - 40px);
+
+   max-width: 1000px; /* Limite sa largeur sur les grands ecrans. */
+   margin: 0 auto;   /* Centre le bloc horizontalement. */
+
+   /* Espace interieur : haut 18 px, cotes 0, bas 40 px. */
+   padding: 18px 0 40px;
+
+   /* Ligne de separation au-dessus du bas de page. */
+   border-top: 1px solid var(--rule);
+
+   font-family: var(--font-ui);
+   font-size: 0.82rem;
+   color: var(--muted);
+
+   display: flex;   /* Dispose les elements sur une ligne. */
+   flex-wrap: wrap; /* Autorise leur passage a la ligne. */
+   gap: 4px 24px;   /* Espacement vertical puis horizontal. */
+
+   /* Repartit l'espace libre entre les elements :
+   par exemple, copyright a gauche et date a droite. */
+   justify-content: space-between;
+   }
+
+   @media (max-width: 720px) {
+   /* Reduit legerement la taille du texte. */
+   body {
+   font-size: 1.05rem;
+   }
+
+   /* Place les blocs de l'accueil dans une seule colonne. */
+   .home {
+   grid-template-columns: minmax(0, 1fr);
+   gap: 26px;
+   }
+
+   /* Reduit la largeur du bloc photo et la taille des initiales. */
+   .photo {
+   max-width: 170px;
+   font-size: 2.4rem;
+   }
+
+   /* Place la date au-dessus de la description dans les publications, les conferences et le CV. */
+   .entries li {
+   grid-template-columns: minmax(0, 1fr);
+   gap: 2px;
+   }
+
+   /* Ajuste les espaces des sections sur petit ecran. */
+   section {
+   padding-top: 38px;
+   scroll-margin-top: 96px;
+   }}
+
+   /* Bloc contenant ton grand nom et ton poste. */
+   .identity-heading {
+   padding: 24px 0 20px;             /* Espace au-dessus et en dessous. */
+   border-bottom: 1px solid var(--rule);
+   text-align: center;              /* Centre le texte. */
+   }
+
+   /* Apparence de ton nom dans ce bloc. */
+   .identity-heading h1 {
+   font-family: var(--font-body);
+
+   /* Taille adaptable : minimum 2.7rem, taille souhaitee de 7 % de la largeur de l'ecran, maximum 4.5rem. */
+   font-size: clamp(2.7rem, 7vw, 4.5rem);
+
+   font-weight: 600;          /* Texte semi-gras. */
+   line-height: 1.08;         /* Espacement entre les lignes. */
+   letter-spacing: -0.035em;  /* Rapproche legerement les lettres. */
+   color: var(--accent);
+   }
+
+   /* Apparence du poste affiche sous ton nom. */
+   .identity-subtitle {
+   margin: 14px auto 0;       /* Espace au-dessus et centrage du bloc. */
+   font-family: var(--font-ui);
+
+   /* Taille adaptable entre 1rem et 1.2rem. */
+   font-size: clamp(1rem, 2.5vw, 1.2rem);
+
+   color: var(--muted);
+   }
+
+   /* Espace avant l'accueil quand il suit directement le bloc contenant ton nom. */
+   .identity-heading + .home {
+   padding-top: 22px;
+   }
+
+   /* Reduit les espaces autour du titre sur petit ecran. */
+   @media (max-width: 720px) {
+   .identity-heading {
+   padding-top: 20px;
+   padding-bottom: 18px;
+   }}
+   /* EMAIL CLIQUABLE : un clic copie l'adresse. */
+   .copy-email {
+   font: inherit;            /* Meme police que le reste du bloc. */
+   color: var(--accent);
+   background: none;
+   border: 0;
+   padding: 0;
+   cursor: pointer;          /* Affiche une main au survol. */
+   text-align: left;
+   }
+
+   /* Petits textes "Copier" et "Copie !", caches par defaut. */
+   .copy-hint,
+   .copy-done {
+   display: none;
+   margin-left: 8px;
+   font-size: 0.75rem;
+   color: var(--muted);
+   }
+
+   /* Affiche "Copier" quand la souris passe sur l'adresse. */
+   .copy-email:hover .copy-hint,
+   .copy-email:focus-visible .copy-hint {
+   display: inline;
+   }
+
+   /* Apres le clic : remplace "Copier" par "Copie !". */
+   .copy-email.copied .copy-hint {
+   display: none;
+   }
+
+   .copy-email.copied .copy-done {
+   display: inline;
+   }
+
+   /* PAGE EXPOSES : titre de page, annees et sous-titres. */
+   /* Titre de la page : meme couleur et memes espaces que sur la page Publications. */
+   .page-heading {
+   padding-top: 48px;        /* Meme espace au-dessus du titre que les autres pages. */
+   margin-bottom: 26px;      /* Espace entre le titre et la premiere annee. */
+   }
+
+   /* Pas d'espace en plus au-dessus de la premiere annee. */
+   .page-heading + .year {
+   padding-top: 0;
+   }
+
+   /* Sur petit ecran, meme espace que les sections des autres pages. */
+   @media (max-width: 720px) {
+   .page-heading {
+   padding-top: 38px;
+   }}
+
+   /* Titre de chaque annee (2026, 2024...). */
+   .year h2 {
+   font-size: 1.15rem;         /* Plus grand que les autres titres h2. */
+   letter-spacing: 0.04em;
+   }
+
+   /* Sous-titres Talks / Posters, en gras. */
+   .year h3 {
+   font-weight: 700;
+   font-size: 1.02rem;
+   margin: 18px 0 10px;
+   }
+
+   /* Pas d'espace en trop avant le premier sous-titre de l'annee. */
+   .year h2 + h3 {
+   margin-top: 0;
+   }
+
+   /* Espace sous chaque liste avant le sous-titre suivant. */
+   .year .entries {
+   margin-bottom: 8px;
+   }
+
+   /* Noms de conferences avec lien : meme couleur que le texte,
+   soulignement discret, bleu au survol de la souris. */
+   .year h3 a,
+   .year .what strong a {
+   color: var(--ink);
+   text-decoration-color: var(--rule);
+   }
+
+   .year h3 a:hover,
+   .year .what strong a:hover {
+   color: var(--accent);
+   text-decoration-color: var(--accent);
+   }
+
+   /* Laisse les lignes utiliser toute la largeur disponible. */
+   .year .what p {
+   max-width: none;
+   }
+
+   /* PAGE ENSEIGNEMENT : ligne qui precise le public sous le nom de l'etablissement. */
+   .year .audience {
+   font-family: var(--font-ui);
+   font-size: 0.9rem;
+   color: var(--muted);
+   margin: -4px 0 12px;
+   max-width: none;
+   }
+
+   /* PAGE ENSEIGNEMENT : liste des cours. */
+   .page-title {
+   margin-bottom: 26px;
+   }
+
+   .courses {
+   max-width: none;
+   }
+
+   /* Espace entre la presentation et le titre de la liste. */
+   #teaching h2 {
+   margin-top: 30px;
+   }
+
+   .courses li {
+   margin-bottom: 12px;
+   }
+
+   /* Nom de cours avec lien : couleur du texte, bleu au survol. */
+   .courses strong a {
+   color: var(--ink);
+   text-decoration-color: var(--rule);
+   }
+
+   .courses strong a:hover {
+   color: var(--accent);
+   text-decoration-color: var(--accent);
+   }
+
+   /* Petite ligne grise sous les titres : niveau des etudiants. */
+   .level {
+   font-family: var(--font-ui);
+   font-size: 0.9rem;
+   color: var(--muted);
+   margin: -6px 0 10px;
+   }
+</style>
+<!-- Fin des regles CSS. -->
+
+</head>
+<!-- Fin des reglages de la page. -->
+
+<body>
+<!-- Debut du contenu visible de la page. -->
+
+<!-- Debut de la barre du haut.
+class="topbar" applique les regles CSS de .topbar. -->
+<header class="topbar">
+
+   <!-- Regroupe et aligne le nom, le menu et les boutons de langue. -->
+   <div class="topbar-inner">
+
+   <!-- Affiche ton nom.
+   Un clic dessus ouvre index.html, la page d'accueil.
+   class="brand" applique le style du nom dans le menu. -->
+   <a class="brand" href="index.html">Farah Chaaban</a>
+
+   <!-- Debut du menu. aria-label nomme ce menu pour les lecteurs d'ecran. -->
+   <nav class="nav" aria-label="Sections">
+
+   <!-- Lien vers l'accueil.
+   aria-current="page" indique que cette page est active.
+   Le CSS affiche Home ou Accueil selon la langue choisie. -->
+   <a href="index.html">
+   <span lang="en">Home</span>
+   <span lang="fr">Accueil</span>
+   </a>
+
+   <!-- Lien Research masque temporairement.
+   <a href="research.html">
+   <span lang="en">Research</span>
+   <span lang="fr">Recherche</span>
+   </a> 
+   -->
+
+   <!-- Lien vers les publications. -->
+   <a href="publications.html">Publications</a>
+
+   <!-- Lien vers les conferences et presentations. -->
+   <a href="talks.html">
+   <span lang="en">Contributions</span>
+   <span lang="fr">Contributions</span>
+   </a>
+
+   <!-- Lien vers les enseignements. -->
+   <a href="teaching.html" aria-current="page">
+   <span lang="en">Teaching</span>
+   <span lang="fr">Enseignement</span>
+   </a>
+
+   <!-- Lien vers ton parcours. -->
+   <a href="cv.html">CV</a>
+
+   </nav>
+   <!-- Fin du menu. -->
+
+   <!-- Regroupe les deux boutons de langue.
+   role="group" indique aux lecteurs d'ecran
+   que ces boutons appartiennent au meme groupe. -->
+   <div class="lang" role="group" aria-label="Language / Langue">
+
+   <!-- Bouton anglais.
+   type="button" : bouton simple, sans envoi de formulaire.
+   id="lang-en" : identifiant unique du bouton.
+   data-set-lang="en" : valeur utilisee par le JavaScript.
+   aria-pressed="true" : anglais selectionne au depart. -->
+   <button  type="button" id="lang-en" data-set-lang="en" aria-pressed="true" >EN</button>
+
+   <!-- Bouton francais.
+   aria-pressed="false" : francais non selectionne au depart. -->
+   <button  type="button"  id="lang-fr"  data-set-lang="fr"  aria-pressed="false"  >FR</button>
+
+   </div>
+   <!-- Fin du groupe des langues. -->
+
+   </div>
+   <!-- Fin du conteneur interieur. -->
+
+</header>
+<!-- Fin de la barre du haut. -->
+
+<main>
+
+<section id="teaching">
+
+   <h1 class="page-title"><span lang="en">Teaching</span><span lang="fr">Enseignement</span></h1>
+
+
+   <h2><span lang="en">Current (2026 – present)</span><span lang="fr">En cours (2026 – aujourd’hui)</span></h2>
+
+   <p class="level"><span lang="en">First-year undergraduates (L1 level)</span><span lang="fr">Première année de licence (niveau L1)</span></p>
+
+   <!-- Un cours par ligne : nom du cours en gras, etablissement, puis les semestres.
+   Chaque semestre peut etre un lien vers la fiche du cours dans le catalogue.
+   Pour ajouter un semestre, ajoute une virgule puis par exemple :
+   <a href="ADRESSE"><span lang="en">Fall 2025</span><span lang="fr">automne 2025</span></a>
+   Quand un cours est termine, deplace son bloc <li> dans la liste "Past".
+   Les heures sont entre parentheses apres le nom du cours. -->
+   <ul class="courses">
+     <li>
+       <span lang="en">Teaching assistant (tutorials)</span><span lang="fr">Chargée de travaux dirigés</span>,
+       <strong><span lang="en">Mathematics for science 2: linear algebra and probability</span><span lang="fr">Mathématiques pour les sciences 2 : algèbre linéaire et probabilités</span></strong> (30 h),
+       <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a> —
+       <a href="https://sciences.sorbonne-universite.fr/formation-sciences/offre-de-formation/licences/l1/ue-l1"><span lang="en">Spring 2026</span><span lang="fr">printemps 2026</span></a>, <a href="https://sciences.sorbonne-universite.fr/formation-sciences/offre-de-formation/licences/l1/ue-l1"><span lang="en">Spring 2027</span><span lang="fr">printemps 2027</span></a> <span lang="en">(upcoming)</span><span lang="fr">(à venir)</span>
+     </li>
+   </ul>
+
+   <h2><span lang="en">Past (2022 – 2025)</span><span lang="fr">Passés (2022 – 2025)</span></h2>
+
+   <p class="level"><span lang="en">First-year engineering students (L3 level)</span><span lang="fr">Élèves ingénieurs de première année (niveau L3)</span></p>
+
+   <ul class="courses">
+     <li>
+       <span lang="en">Teaching assistant (tutorials)</span><span lang="fr">Chargée de travaux dirigés</span>,
+       <strong><span lang="en">Introduction to the discretization of partial differential equations</span><span lang="fr">Introduction à la discrétisation des équations aux dérivées partielles</span></strong> (30 h),
+       <a href="https://www.ensta.fr/">ENSTA Paris</a> —
+       <a href="https://synapses.ensta-paris.fr/catalogue/2023-2024/ue/5/MA103-introduction-a-la-discretisation-des-equations-aux-derivees-partielles"><span lang="en">Spring 2024</span><span lang="fr">printemps 2024</span></a>, <a href="https://synapses.ensta-paris.fr/catalogue/2024-2025/ue/5/MA103-introduction-a-la-discretisation-des-equations-aux-derivees-partielles"><span lang="en">Spring 2025</span><span lang="fr">printemps 2025</span></a>
+     </li>
+     <li>
+       <span lang="en">Teaching assistant (tutorials)</span><span lang="fr">Chargée de travaux dirigés</span>,
+       <strong><span lang="en">Functions of a complex variable</span><span lang="fr">Fonctions de variable complexe</span></strong> (30 h),
+       <a href="https://www.ensta.fr/">ENSTA Paris</a> —
+       <a href="https://synapses.ensta-paris.fr/catalogue/2023-2024/ue/6/MA104-fonctions-de-variable-complexe"><span lang="en">Fall 2023</span><span lang="fr">automne 2023</span></a>, <a href="https://synapses.ensta-paris.fr/catalogue/2024-2025/ue/6/MA104-fonctions-d-une-variable-complexe"><span lang="en">Fall 2024</span><span lang="fr">automne 2024</span></a>
+     </li>
+     <li>
+       <span lang="en">Teaching assistant (tutorials)</span><span lang="fr">Chargée de travaux dirigés</span>,
+       <strong><span lang="en">Quadratic optimization</span><span lang="fr">Optimisation quadratique</span></strong> (30 h),
+       <a href="https://www.ensta.fr/">ENSTA Paris</a> —
+       <a href="https://synapses.ensta-paris.fr/catalogue/2022-2023/ue/1/apm-3ao01-ta-optimisation-quadratique"><span lang="en">Spring 2023</span><span lang="fr">printemps 2023</span></a>, <a href="https://synapses.ensta-paris.fr/catalogue/2023-2024/ue/1/AO101-optimisation-quadratique"><span lang="en">Spring 2024</span><span lang="fr">printemps 2024</span></a>
+     </li>
+   </ul>
+
+</section>
+
+</main>
+
+<footer>
+  <!-- Copyright. -->
+  <span>© 2026 Farah Chaaban</span>
+
+  <!-- Date de mise a jour : a changer a la main quand tu modifies le site. -->
+  <span>
+    <span lang="en">Last updated: November 24, 2026</span>
+    <span lang="fr">Dernière mise à jour : 24 novembre 2026</span>
+  </span>
+</footer>
+
+<script>
+  /* Gestion des boutons EN et FR. */
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll("[data-set-lang]");
+
+    function setLang(lang, remember) {
+      if (lang !== "en" && lang !== "fr") return;
+
+      root.setAttribute("data-lang", lang);
+      root.setAttribute("lang", lang);
+
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute(
+          "aria-pressed",
+          buttons[i].getAttribute("data-set-lang") === lang
+            ? "true"
+            : "false"
+        );
+      }
+
+      if (remember) {
+        try {
+          localStorage.setItem("lang", lang);
+        } catch (e) {}
+      }
+    }
+
+    var saved = null;
+
+    try {
+      saved = localStorage.getItem("lang");
+    } catch (e) {}
+
+    if (saved) setLang(saved, false);
+
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function () {
+        setLang(this.getAttribute("data-set-lang"), true);
+      });
+    }
+  })();
+</script>
+</body>
+</html>
